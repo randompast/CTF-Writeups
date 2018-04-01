@@ -1,0 +1,15 @@
+I made this challenge.  More details in the official repo.
+
+This was a challenge intended to teach the command mogrify.
+You are presented with a bit of a story saying that reality will fracture
+after a powerful spell is cast and it's your job to put back the pieces.
+You'll see a folder with ~10k folders many of which contain a 10x10 image.
+Your job is to reconstruct this image.
+You can do this by:
+ 1) moving all images to the root directory : mv */* .
+ 2) mogrify ... I'll let you do the rest
+The image is a neat find from the ffxv wiki called Crystal Tower.
+The flag is a quote from marvel's hydra.
+
+A lot of the lore is straight from Forgotten Realms wiki.
+ Additionally, there are references to Stranger Things and Wheel of Time. 

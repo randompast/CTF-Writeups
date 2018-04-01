@@ -1,0 +1,22 @@
+I wrote the orb series.
+
+Orb 1 was a substitution cipher written without the letter e and z.
+This makes it a lipogram.
+It made it a tad harder on the automated solvers, but it was also a hint.
+Many people decrypted the message and were wondering where the flag could hide.
+The flag was in the translation from plain text to cipher text.
+
+I generated the problem with the following command:
+cat secret.txt | tr a-z "flag{secretflag}" > encrypted.txt
+
+Similarly, one could experiment with the reverse command:
+cat encrypted.txt | tr "abcdefghijklmnopqrstuvwxyz" a-z | less
+
+Using some online solver like quipqiup gets one most of the way.
+We might then realize that each time we see an f in the cipher text it corresponds
+to an a in the plain text denoted as f->a. We'll replace it in the command as follows:
+
+cat encrypted.txt | tr "fbcdefghijklmnopqrstuvwxyz" a-z | less
+
+Similar in this way we'll make guesses, gradually narrowing down and revealing
+the flag with successive views of the best guess so far.
